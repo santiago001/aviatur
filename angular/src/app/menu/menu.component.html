@@ -1,0 +1,52 @@
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" [routerLink]="['/']" >SANTIAGO MARTINEZ - PRUEBA </a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a class="glyphicon glyphicon-list-alt"> Marcas </a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a [routerLink]="['/marcas']">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a [routerLink]="['/marcasview']">Existentes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a class="glyphicon glyphicon-lock"> Productos</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a [routerLink]="['/productos']">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a [routerLink]="['/productosview']">Existentes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+    </div>
+
+
+    

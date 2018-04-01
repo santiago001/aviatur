@@ -1,0 +1,35 @@
+<div id="page-wrapper">
+	<br>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<label> NUEVA MARCA
+					</label>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<form  role="form" id="createMarcaForm" name="createMarcaForm" (ngSubmit)="createMarca(createMarcaForm.value)" #createMarcaForm="ngForm" >
+								<div class="form-group">
+									<label>Nombre:</label>
+									<input [(ngModel)]="nombre" type="text" required  name="nombre" class="form-control" id="nombre" >	
+								</div>
+								<div class="form-group">
+									<label>Referencia:</label>
+									<input [(ngModel)]="referencia" type="number" required name="referencia" class="form-control" id="referencia" >
+							
+								</div>
+								<button type="submit" class="btn btn-primary" >	
+								REGISTRAR
+								</button>
+								
+							</form>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+

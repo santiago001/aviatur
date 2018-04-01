@@ -1,0 +1,36 @@
+<div id="page-wrapper">
+	<br>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<label> MARCAS
+					</label>
+				</div>
+				<div class="panel-body">
+					<table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Referencia</th>
+                                <th>Opción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr  *ngFor="let marca of marcas.result " class='gradeA odd' role='row'>
+                                <td> {{ marca.nombre_marca }}</td>
+                                <td> {{ marca.referencia_marca }}</td>
+                                <td>
+                            	<a title="Editar" [routerLink]="['/marcasedit', marca.id_marca]" class="glyphicon glyphicon-pencil"> </a>
+                                			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a title="Eliminar"  class="glyphicon glyphicon-trash" (click) = "deleteMarcas( marca.id_marca , marca.nombre_marca)"></a>
+                            	</td>
+                            </tr>	
+                        </tbody>
+                    </table>    
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div id="page-wrapper">
+	<br>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<label> PRODUCTOS
+					</label>
+				</div>
+				<div class="panel-body">
+					<table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Marca</th>
+                                <th>Observación</th>
+                                <th>Cantidad</th>
+                                <th>Opción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr  *ngFor="let producto of productos.result " class='gradeA odd' role='row'>
+                                <td> {{ producto.nombre_producto }}</td>
+
+                                <td> <div *ngFor="let marca of marcas.result "> <div *ngIf="marca.id_marca == producto.marca_producto"> {{ marca.nombre_marca }} </div></div></td>
+                                <td> {{ producto.observacion_producto }}</td>
+                                <td> {{ producto.cantidad_producto }}</td>
+                                <td>
+                                <a title="Editar" [routerLink]="['/productosedit', producto.id]" class="glyphicon glyphicon-pencil"> </a>
+                                			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a title="Eliminar"  class="glyphicon glyphicon-trash" (click) = "deleteProductos( producto.id , producto.nombre_producto)"></a>
+                            	</td>
+                            </tr>	
+                        </tbody>
+
+                    </table>    
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>

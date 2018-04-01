@@ -1,0 +1,48 @@
+<div id="page-wrapper">
+	<br>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<label> EDITAR PRODUCTO
+					</label>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<form role="form" id="createProductosForm" name="createProductosForm" (ngSubmit)="updateProducto(productos)" #editProductoForm="ngForm" >
+								<div class="form-group">
+									<label>Nombre:</label>
+									<input [(ngModel)]="productos.nombreProducto" type="text" name="nombre" class="form-control" id="nombre" >	
+									<div id="errornombre" style="color:red;"></div>
+								</div>
+								<div class="form-group">
+									<label>Marca:</label>
+									<select  [(ngModel)]="productos.marcaProducto" name="marca" class="form-control" ng-init="productos.marcaProducto = '3'">
+                                		<option *ngFor="let marca of marcas.result " value="{{ marca.id_marca }}" > {{ marca.nombre_marca }}</option>
+									</select>
+									<div id="errormarca" style="color:red;"></div>
+								</div>
+
+								<div class="form-group">
+									<label>Observación:</label>
+									<textarea [(ngModel)]="productos.observacionProducto" name="observacion" class="form-control" rows="3" id="observacion"></textarea>
+									<div id="errorobs" style="color:red;"></div>
+								</div>
+
+								<div class="form-group">
+									<label>Cantidad en inventario:</label>
+									<input [(ngModel)]="productos.cantidadProducto" type="number" name="cantidad" class="form-control" id="cantidad" >	
+									<div id="errorcantidad" style="color:red;"></div>	
+								</div>
+								<button type="submit" class="btn btn-primary" >	
+								REGISTRAR
+								</button>
+							</form>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>

@@ -1,0 +1,13 @@
+productos:
+    resource: "@ProductosBundle/Controller/"
+    type:     annotation
+    prefix:   /productos
+
+marcas:
+    resource: "@MarcasBundle/Controller/"
+    type:     annotation
+    prefix:   /marcas
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
